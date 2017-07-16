@@ -13,6 +13,8 @@ Created on Jul 30, 2016
 from keras import backend as K
 import numpy as np
 import os.path
+import matplotlib
+matplotlib.use('Agg')
 
 from Util import CostFunctions as cf
 from Util import DataHandler as dh
@@ -65,7 +67,7 @@ Make your choice here - an integer from 0 to 4.
 4: 134 normalized
 '''
 choice = 0
-dataPath = '/home/hl475/Documents/deepcytof/Data/' + dataSet[choice]
+dataPath = '/home/ubuntu/notebooks/deepcytof/Data/' + dataSet[choice]
 if choice == 0:
     dataIndex = np.arange(1,16+1)
     trainIndex = dataIndex
